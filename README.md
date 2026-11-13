@@ -38,7 +38,7 @@ Với Python 3.11 trở lên, có thể cài bản phát triển ngay trong thư
 python -m pip install -e .
 ~~~
 
-Hoặc cài trực tiếp từ Git mà không cần clone riêng mã nguồn DOG. Repository hiện tại là monorepo nên URL phải chỉ rõ thư mục `dog-prototype`:
+Hoặc cài trực tiếp từ repository GitHub mà không cần clone riêng mã nguồn DOG:
 
 ~~~bash
 python -m pip install git+https://github.com/doanduccuong/dog-prototype.git
