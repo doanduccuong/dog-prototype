@@ -60,7 +60,9 @@ Gói DOG chỉ cần cài một lần trên mỗi máy. Lệnh `dog install .` �
 docker pull python:3.12-slim-bookworm
 ~~~
 
-Ảnh Docker phải có Bash và công cụ dự án cần dùng. Chọn ảnh có sẵn bằng `--image`. Có thể giới hạn quyền ghi bằng `--allow src --allow tests` và giữ riêng tệp bằng `--protect <path>`. Mặc định DOG bảo vệ `.git` và `.codex`. Installer từ chối ghi đè cấu hình Codex đã có. Bản prototype hiện chụp tối đa 512 mục và 8 MiB, kể cả metadata Git, nên phù hợp nhất với bản clone nhỏ và sạch.
+DOG dùng Docker image để tạo container chạy lệnh của Codex. Mặc định DOG dùng `python:3.12-slim-bookworm`. Nếu dự án cần thêm công cụ, dùng `--image <tên-image>` để chọn một Docker image có sẵn trên máy, chứa Bash và các công cụ dự án cần.
+
+Có thể giới hạn quyền ghi bằng `--allow src --allow tests` và bảo vệ thêm tệp bằng `--protect <path>`. Mặc định DOG bảo vệ `.git` và `.codex`. Trình cài đặt từ chối ghi đè cấu hình Codex đã có. Bản prototype hiện chụp tối đa 512 mục và 8 MiB, kể cả metadata Git, nên phù hợp nhất với bản clone nhỏ và sạch.
 
 ### Chạy các phép thử đã định sẵn
 
