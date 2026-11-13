@@ -42,7 +42,7 @@ Hoặc cài trực tiếp từ Git mà không cần clone riêng mã nguồn DOG
 
 ~~~bash
 python -m pip install \
-  "dog-prototype[codex] @ git+https://github.com/doanduccuong/Group-14-project.git#subdirectory=dog-prototype"
+  "dog-prototype[codex] @ git+https://github.com/doanduccuong/dog-prototype.git"
 ~~~
 
 Sau khi gói đã được công bố lên nhánh Git, trên mỗi repository cần bảo vệ chỉ cần chạy:
