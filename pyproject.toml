@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dog-prototype"
+version = "0.1.0"
+description = "Experimental destructive operations guardrail for coding agents"
+requires-python = ">=3.10"
+dependencies = ["bashlex==0.18"]
+
+[project.optional-dependencies]
+agent = ["mini-swe-agent==2.4.6"]
+codex = ["mcp==1.30.0"]
+
+[project.scripts]
+dog = "dog.__main__:main"
+
+[tool.setuptools]
+packages = ["dog"]
+
+[tool.setuptools.package-data]
+dog = ["scenarios.json"]
