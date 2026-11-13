@@ -10,12 +10,12 @@ Codex CLI → MCP run_command → Guard → DockerRunner
 
 ## Cài đặt và chạy
 
-Từ thư mục `dog-prototype/`, dùng Python 3.10 trở lên và tài khoản hệ điều hành thường. Bật Docker Desktop hoặc Docker Engine trước khi chạy benchmark đầy đủ hoặc agent.
+Từ thư mục `dog-prototype/`, dùng Python 3.11 trở lên và tài khoản hệ điều hành thường. Bật Docker Desktop hoặc Docker Engine trước khi chạy benchmark đầy đủ hoặc agent.
 
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
-python -m pip install '.[codex]'
+python -m pip install .
 docker pull python:3.12-slim-bookworm
 
 python -m unittest discover -s tests -v
@@ -35,14 +35,13 @@ python -m dog codex-demo
 Với Python 3.11 trở lên, có thể cài bản phát triển ngay trong thư mục DOG:
 
 ~~~bash
-python -m pip install -e '.[codex]'
+python -m pip install -e .
 ~~~
 
 Hoặc cài trực tiếp từ Git mà không cần clone riêng mã nguồn DOG. Repository hiện tại là monorepo nên URL phải chỉ rõ thư mục `dog-prototype`:
 
 ~~~bash
-python -m pip install \
-  "dog-prototype[codex] @ git+https://github.com/doanduccuong/dog-prototype.git"
+python -m pip install git+https://github.com/doanduccuong/dog-prototype.git
 ~~~
 
 Sau khi gói đã được công bố lên nhánh Git, trên mỗi repository cần bảo vệ chỉ cần chạy:
